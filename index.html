@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+</head>
+<body>
+    <header>
+      <div class="logo">
+        <img src="images/logo.svg" alt="logo" loading="lazy" />
+      </div>
+
+      <div  class="hamburger-menu-container" id="icons-menu" onclick="changeHamburger(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </header>
+
+    <section>
+      <nav id="my-nav">    
+        <div class="drop" id="dropdown-one">Features 
+          <img src="images/icon-arrow-up.svg" alt="icon arrow up" class="arrow" id="first-arrow" loading="lazy"/>
+        </div>
+
+        <div class="dropdown-content" id="dropdown_content_one">
+          <a href="#todolist">
+            <img src="images/icon-todo.svg" alt="todo icon" loading="lazy"/>Todolist
+          </a>
+          <a href="#calender" class="link">
+            <img src="images/icon-calendar.svg" alt="calender icon" loading="lazy"/>Calender
+          </a>
+          <a href="#reminder" class="link">
+            <img src="images/icon-reminders.svg" alt="reminders icon" loading="lazy"/>Reminder
+          </a>
+          <a href="#planning" class="link">
+            <img src="images/icon-planning.svg" alt="planning icon" loading="lazy"/>Planning
+          </a>
+        </div>
+    
+        <div class="drop" id="dropdown-two">Company
+          <img src="images/icon-arrow-up.svg" alt="icon arrow up" class="arrow" id="second-arrow" loading="lazy"/>
+        </div>
+    
+        <div class="dropdown-content" id="dropdown_content_two">
+          <a href="#history">History</a>
+          <a href="#ourteam">Our Team</a>
+          <a href="#blog">Blog</a>
+        </div>
+
+        <div class="car-abt-container">      
+          <a href="#career" id="career">Careers</a>
+          <a href="#about" class="move-abt">About</a>
+        <div>
+    
+        <div class="log-reg-container">                
+          <a href="#login" id="login">Login</a>
+          <a href="#register"><button>Register</button></a>
+        </div>
+      </nav>
+    </section>
+            
+  <main>
+    <div class="container">
+      <div>
+        <img src="images/image-hero-mobile.png" alt="phone hero" class="phone-hero" loading="lazy">
+      </div>
+
+      <div>
+        <img src="images/image-hero-desktop.png" alt="desktop hero" class="desktop-hero" loading="lazy"/>
+      </div>
+
+      <div class="remotes">
+        <h1>Make remote work</h1>
+        <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+        <button>Learn more</button>
+         
+
+        <div class="icon-container">
+          <div class="icons">
+            <img src="images/client-databiz.svg" alt="data of client's biz" loading="lazy" style="width:90%">
+          </div>
+          <div class="icons">
+            <img src="images/client-audiophile.svg" alt="client audiophile" loading="lazy" style="width:70%">
+          </div>
+          <div class="icons">
+            <img src="images/client-meet.svg" alt="meeting of client" loading="lazy" style="width:90%">
+          </div>
+          <div class="icons">
+            <img src="images/client-maker.svg" alt="client maker" loading="lazy" style="width:85%">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.linkedin.com/in/jonahunuafe" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.linkedin.com/in/jonahunuafe" target="_blank">Jonah Unuafe</a>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,409 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+html {
+  font-family: Helvetica, sans-serif;
+}
+
+:root {
+  --Almost-White: hsl(0, 0%, 98%);
+  --Medium-Gray: hsl(0, 0%, 41%);
+  --Almost-Black: hsl(0, 0%, 8%);
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+  
+.logo {
+  max-width: 100%;
+  margin: 1.5rem;
+}
+
+.phone-hero {
+  width: 100%;
+  display: block;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--Almost-Black);
+}
+
+.desktop-hero {
+  display: none;
+}
+
+.remotes {
+  text-align: center;
+}
+
+.remotes h1 {
+  margin-top: 2.2rem;
+}
+
+.remotes p {
+  width: 90%;
+  margin-left: 1.2rem;
+  color: var(--Medium-Gray);
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+.remotes button {
+  padding: 0.8rem;
+  background-color: var(--Almost-Black);
+  color: var(--Almost-White);
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1.2rem;
+  width: 34%;
+  margin-top: 0.5rem;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5.5rem;
+}
+
+.arrow:hover {
+  transform: rotate(180deg);
+}
+
+
+#dropdown_content_one img {
+  padding-right: 0.5rem;
+  padding-top: 0.3rem;
+  position: relative;
+  top: 0.15rem;
+}
+
+#dropdown_content_two {
+  line-height: 1.5;
+}
+
+.drop {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 6px 10px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px;
+  border-radius: 0.5rem;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: var(--Almost-Black);
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(153, 139, 139);
+  color: var(--Almost-White);
+  border-radius: 0.3rem;
+  width: max-content;
+} 
+
+.show {
+  display: block;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 4rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+/* FOR MOBILE PHONES */
+@media (max-width: 768px) {
+  .logo {
+    position: relative;
+    top: 0.25rem;
+  }
+
+  nav {
+    visibility: hidden;
+    position: absolute;
+    background-color: #fff;
+    width: 65%;
+    right: 0;
+    height: 100vh;
+    padding-top: 0.5rem;
+    padding-left: 1.5rem;
+    font-size: 1.2rem;
+    gap: 0.7rem;
+  }
+
+  nav, div a {
+    color: var(--Medium-Gray);
+  }
+
+  .dropdown-content {
+    width: max-content;
+    padding: 0.5rem;
+    margin-bottom: 0.2rem;
+  }
+
+  nav, .car-abt-container, .log-reg-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .car-abt-container {
+    gap: 1.5rem;
+  }
+
+  .log-reg-container {
+    align-items: center;
+    justify-content: center;
+    margin-left: -1.5rem;
+    margin-top: 1rem;
+    gap: 1.2rem;
+  }
+
+  .log-reg-container button {
+    width: 50vw;
+    border-radius: 0.8rem;
+    padding: 0.8rem;
+    border: 1px solid var(--Medium-Gray);
+    background-color: #fff;
+    color: var(--Medium-Gray);
+    font-size: 1rem;
+  }
+
+
+  #first-arrow {
+    position: relative;
+    left: 0.8rem;
+    bottom: 0.2rem;
+  }
+
+  #second-arrow {
+    position: relative;
+    left: 0.4rem;
+  }
+
+  .show-height {
+    height: 115px;
+  }
+
+  .display-height {
+    height: 98px;
+  }
+
+   /* This makes hamburger to show the nav */
+  .visible {
+    visibility: visible;
+  }
+
+  .hamburger-menu-container {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  float: right;
+  bottom: 3.8rem;
+  margin-right: 1.5rem;
+  }
+
+  .bar1, .bar2, .bar3 {
+  width: 35px;
+  min-height: 5px;
+  background-color: var(--Almost-Black);
+  
+  margin: 6px 0;
+  transition: 0.4s;
+  }
+
+  .change .bar1 {
+  transform: translate(0, 11px) rotate(45deg);
+  }
+
+  .change .bar2 {
+  opacity: 0;
+  }
+
+  .change .bar3 {
+  transform: translate(0, -11px) rotate(-45deg);
+  }
+}
+
+/* FOR TABLETS */
+@media (min-width: 769px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  nav {
+    display: flex;
+    position: relative;
+    bottom: 3.5rem;
+    left: 8rem;
+    gap: 1.2rem;
+  }
+
+  .log-reg-container button {
+    cursor: pointer;
+  }
+ 
+  .log-reg-container {
+    display: flex;
+    position: absolute;
+    left: 65%;
+  }
+
+  .log-reg-container button {
+    border-radius: 0.5rem;
+    border: 0.5px solid;
+    margin-left: 1rem;
+    padding: 0.3rem;
+    width: 100%;
+    position: relative;
+    bottom: 0.2rem;
+  }
+
+  .car-abt-container {
+    display: flex;
+    gap: 2rem;
+  } 
+  
+  .dropdown-content {
+    padding: 1rem;
+  }
+
+  .dropdown-content a {
+    padding: 0.2rem;
+  }
+
+  .dropdown-content a:hover {
+    padding: 0.3rem;
+  }
+
+  #dropdown_content_one {
+    position: absolute;
+    top: 2rem;
+    left: -3rem;
+  }
+
+  #dropdown_content_two {
+    position: absolute;
+    top: 2rem;
+    left: 4rem; 
+  }
+} 
+
+/* FOR LAPTOP */
+@media (min-width: 992px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  nav {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+    bottom: 3.5rem;
+    left: 12rem;
+  }
+
+  .log-reg-container button {
+    cursor: pointer;
+  }
+ 
+  .log-reg-container {
+    display: flex;
+    position: absolute;
+    left: 73.5%;
+  }
+
+  .log-reg-container button {
+    border-radius: 0.5rem;
+    border: 0.5px solid;
+    margin-left: 1rem;
+    padding: 0.3rem;
+    width: 100%;
+    position: relative;
+    bottom: 0.2rem;
+    background-color: #fff;
+  }
+
+  .car-abt-container {
+    display: flex;
+    gap: 2rem;
+  } 
+
+  .icons-menu {
+    display: none;
+  }
+
+  .phone-hero {
+    display: none;
+  }
+
+  .desktop-hero {
+    display: block;
+    width: 50%;
+    margin-left: 19rem;
+  }
+
+  .remotes {
+    width: 50%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .remotes {
+    text-align: left;
+    margin-top: 5.5rem;
+  }
+
+  .remotes h1 {
+    font-size: 3.8rem;
+    width: 79%;
+  }
+
+  .remotes p {
+    margin-left: 0;
+  }
+
+  .remotes button {
+    background-color: var(--Almost-White);
+    color: var(--Almost-Black);
+    border: 0.5px solid var(--Almost-Black);
+    cursor: pointer;
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 7rem;
+  }
+
+  .remotes h1, .remotes p, .remotes button, .icon-container {
+    margin-left: 8rem;
+  }
+
+  .close-menu-one {
+    display: none;
+  }
+}
